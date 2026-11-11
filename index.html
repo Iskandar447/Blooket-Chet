@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blooket Crypto Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo">₿</div><div><b>BLOOKET CRYPTO</b><small>Control Panel · Demo</small></div></div>
+      <span class="status"><i></i> LOCAL MODE</span>
+      <button id="close" class="icon-btn" aria-label="Yopish">×</button>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="crypto">Crypto</button>
+      <button class="tab" data-tab="stats">Game stats</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </nav>
+    <section id="overview" class="page active">
+      <div class="welcome"><div><p class="eyebrow">CONTROL CENTER</p><h1>Salom! 👋</h1><p class="muted">Panel tayyor. Demo qiymatlar haqiqiy o‘yin balansiga ta’sir qilmaydi.</p></div><div class="orb">◆</div></div>
+      <div class="cards">
+        <article class="metric"><span>Demo balance</span><strong id="balance">$12,450.00</strong><small class="positive">+2.4% today</small></article>
+        <article class="metric"><span>Demo profit</span><strong id="profit">+$294.00</strong><small class="positive">Simulation only</small></article>
+        <article class="metric"><span>Session</span><strong id="session">00:00</strong><small class="muted">Panel ochilganidan beri</small></article>
+      </div>
+      <article class="panel-card"><div class="card-head"><div><h2>Quick controls</h2><p class="muted">Faqat lokal demo boshqaruvlari</p></div><span class="pill">SAFE</span></div>
+        <div class="control-row"><div><b>Auto demo</b><small>Namoyish rejimidagi simulyatsiya</small></div><label class="switch"><input id="auto" type="checkbox"><span></span></label></div>
+        <div class="control-row"><div><b>Desktop notifications</b><small>Brauzer ruxsat bersa bildirishnoma</small></div><label class="switch"><input id="notify" type="checkbox"><span></span></label></div>
+        <button id="reset" class="secondary full">Demo ma’lumotlarini tiklash</button>
+      </article>
+    </section>
+    <section id="crypto" class="page">
+      <div class="section-title"><p class="eyebrow">MARKET SIMULATOR</p><h1>Crypto monitor</h1><p class="muted">Quyidagi narxlar namunaviy, real vaqt kotirovkasi emas.</p></div>
+      <div id="coins" class="coin-list"></div>
+      <article class="panel-card"><h2>Demo transaction</h2><p class="muted">Simulyatsiya uchun aktiv tanlang va miqdor kiriting.</p>
+        <label class="field-label" for="asset">Asset</label><select id="asset"><option>BTC</option><option>ETH</option><option>SOL</option></select>
+        <label class="field-label" for="amount">Miqdor (demo USD)</label><input id="amount" type="number" min="1" value="100">
+        <div class="button-row"><button id="buy" class="primary">Demo Buy</button><button id="sell" class="secondary">Demo Sell</button></div>
+        <p id="trade-result" class="muted" aria-live="polite"></p>
+      </article>
+    </section>
+    <section id="stats" class="page">
+      <div class="section-title"><p class="eyebrow">PAGE OBSERVER</p><h1>Game statistics</h1><p class="muted">Faqat sahifaning oddiy, ko‘rinadigan metadata ma’lumotlari. O‘yin ichki API yoki server ma’lumotlariga ulanmaydi.</p></div>
+      <div class="cards">
+        <article class="metric"><span>Page title</span><strong id="page-title" class="compact">—</strong></article>
+        <article class="metric"><span>Visible text length</span><strong id="text-length">0</strong></article>
+        <article class="metric"><span>Buttons on page</span><strong id="button-count">0</strong></article>
+      </div>
+      <article class="panel-card"><div class="card-head"><h2>Page snapshot</h2><button id="refresh" class="secondary">Yangilash</button></div><p id="snapshot" class="muted">Snapshot hali olinmagan.</p></article>
+    </section>
+    <section id="settings" class="page">
+      <div class="section-title"><p class="eyebrow">PREFERENCES</p><h1>Settings</h1></div>
+      <article class="panel-card">
+        <div class="control-row"><div><b>Compact mode</b><small>Panel oralig‘ini kichraytirish</small></div><label class="switch"><input id="compact" type="checkbox"><span></span></label></div>
+        <div class="control-row"><div><b>Remember panel state</b><small>Sozlamalarni shu brauzerda saqlash</small></div><label class="switch"><input id="remember" type="checkbox" checked><span></span></label></div>
+        <button id="hide" class="secondary full">Panelni yashirish</button>
+      </article>
+      <p class="footnote">Bu mustaqil demo interfeys. Blooket serveriga buyruq yubormaydi, balansni o‘zgartirmaydi va o‘yin qoidalarini chetlab o‘tmaydi.</p>
+    </section>
+    <footer> BLOOKET CRYPTO PANEL <span>v1.0.0</span></footer>
+  </main>
+  <button id="reopen" class="reopen" hidden>₿ Panel</button>
+  <script src="script.js"></script>
+</body>
+</html>
